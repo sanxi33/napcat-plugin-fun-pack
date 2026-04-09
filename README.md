@@ -68,11 +68,6 @@
 - 素材包体积较大，Release 下载会比普通插件慢
 - 资源随机逻辑依赖本地文件，不适合极小体积部署场景
 
-## 开源流程文档
-
-- [OPEN_SOURCE_CHECKLIST.md](./OPEN_SOURCE_CHECKLIST.md)
-- [NAPCAT_PLUGIN_OPEN_SOURCE_WORKFLOW.md](./NAPCAT_PLUGIN_OPEN_SOURCE_WORKFLOW.md)
-
 ## License
 
 MIT
