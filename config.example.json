@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "commandPrefix": "球鳖",
+  "assetsRoot": "./assets",
+  "chooseEnabled": true,
+  "foodEnabled": true,
+  "drinkEnabled": true,
+  "longEnabled": true,
+  "d20Enabled": true,
+  "rollEnabled": true,
+  "trueFalseEnabled": true,
+  "offWorkEnabled": true
+}
