@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "main": "index.mjs",
-  "description": "随机二选一、今天吃什么、今天喝什么、龙图、对吗和骰子等娱乐功能插件",
+  "description": "NapCat 娱乐功能合集插件",
   "author": "sanxi",
   "license": "MIT",
   "keywords": [
