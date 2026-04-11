@@ -1,21 +1,49 @@
 # napcat-plugin-fun-pack
 
-一个 NapCat 原生娱乐插件，提供随机二选一、今天吃什么、今天喝什么、龙图、对吗、`.d20` 和 `/roll` 等轻量玩法。
+一个给 NapCat 用的轻量娱乐插件包。装上之后，你就能在群里直接玩二选一、今天吃什么、今天喝什么、龙图、对吗、`.d20`、`/roll` 这些小功能。
 
-## 功能
+## 这份 README 默认把你当作
 
-- 随机选择：`要A还是B`
-- 今天吃什么：随机食物图
-- 今天喝什么：随机饮料图
-- 龙图：随机龙图
-- `.d20`：掷 20 面骰
-- `/roll`：随机 1-99
-- `对吗`：随机“是/否”图片
-- `下班！`：下班图
+- 已经装好了 NapCat，会导入插件 zip
+- 想先装一个“导入就能玩”的娱乐插件
+- 不想自己准备外部 API、模型或者额外脚本
 
-注意：当前开源版不包含“今天玩什么”功能，README 按实际代码行为编写。
+## 这个插件适合谁
 
-## 配置
+适合：
+
+- 想给群里加一点轻松互动功能
+- 想安装后马上就能用
+- 不想额外配第三方服务
+
+不太适合：
+
+- 想做复杂游戏逻辑的人
+- 对素材体积特别敏感的人
+
+## 装之前要准备什么
+
+基本不用准备别的东西。
+
+这个插件自带素材，默认导入后就能用。你真正只需要决定一件事：
+
+- 命令前缀要不要保留默认值 `球鳖`
+
+## 安装
+
+### 1. 下载插件
+
+从 [Releases](https://github.com/sanxi33/napcat-plugin-fun-pack/releases) 下载：
+
+- `napcat-plugin-fun-pack.zip`
+
+### 2. 导入 NapCat
+
+在 NapCat 插件管理里导入 zip，并启用插件。
+
+### 3. 先不改配置直接试
+
+默认配置如下：
 
 ```json
 {
@@ -33,10 +61,15 @@
 }
 ```
 
-- `assetsRoot` 默认使用仓库内置素材目录 `./assets`
-- 其余布尔项分别控制具体功能开关
+对于大多数人来说：
 
-## 使用示例
+- `assetsRoot` 不要改
+- 先保留所有功能开启
+- 如果你不想带前缀，可以把 `commandPrefix` 设为空
+
+## 怎么用
+
+常见玩法示例：
 
 ```text
 球鳖 要奶茶还是咖啡
@@ -44,29 +77,38 @@
 球鳖 今天喝什么
 球鳖 龙图
 球鳖 对吗
-.d20
-/roll
-下班！
+球鳖 .d20
+球鳖 /roll
+球鳖 下班！
 ```
 
-## 安装
+如果你把前缀留空，就直接发命令本体。
 
-1. 下载当前仓库 [Releases](https://github.com/sanxi33/napcat-plugin-fun-pack/releases) 中的 `napcat-plugin-fun-pack.zip`
-2. 在 NapCat 插件管理中导入压缩包
-3. 启用插件即可使用内置素材
+## 第一次怎么确认自己装好了
 
-## 发布产物
+建议先试这 3 条：
 
-发布包包含：
+```text
+球鳖 今天吃什么
+球鳖 .d20
+球鳖 要奶茶还是咖啡
+```
 
-- `index.mjs`
-- `package.json`
-- `assets/today_food/*`
+只要有任意一条正常返回，说明插件已经工作了。
 
-## 已知限制
+## 一键跳到 NapCat WebUI 安装页
 
-- 素材包体积较大，Release 下载会比普通插件慢
-- 资源随机逻辑依赖本地文件，不适合极小体积部署场景
+如果你的 NapCat 版本是 `4.15.19` 或更高，可以直接点下面按钮跳到插件安装界面：
+
+<a href="https://napneko.github.io/napcat-plugin-index?pluginId=napcat-plugin-fun-pack" target="_blank">
+  <img src="https://github.com/NapNeko/napcat-plugin-index/blob/pages/button.png?raw=true" alt="在 NapCat WebUI 中打开" width="170">
+</a>
+
+## 你可能会关心的事
+
+- 开源版目前不包含“今天玩什么”功能
+- 素材是本地文件，所以 release 包会比普通纯代码插件大一些
+- 如果你只想关掉某个功能，可以在配置页里把对应布尔开关关掉
 
 ## License
 
