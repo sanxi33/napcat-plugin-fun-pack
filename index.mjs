@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 
 const DEFAULT_CONFIG = {
   enabled: true,
-  commandPrefix: '球鳖',
+  commandPrefix: '/',
   assetsRoot: './assets',
   chooseEnabled: true,
   foodEnabled: true,
@@ -45,7 +45,7 @@ function sanitizeConfig(raw) {
   out.rollEnabled = Boolean(out.rollEnabled);
   out.trueFalseEnabled = Boolean(out.trueFalseEnabled);
   out.offWorkEnabled = Boolean(out.offWorkEnabled);
-  out.commandPrefix = String(out.commandPrefix || '球鳖').trim();
+  out.commandPrefix = String(out.commandPrefix || '/').trim();
   out.assetsRoot = String(out.assetsRoot || DEFAULT_CONFIG.assetsRoot).trim();
   return out;
 }
@@ -183,7 +183,7 @@ export const plugin_init = async (ctx) => {
 
   plugin_config_ui = ctx.NapCatConfig.combine(
     ctx.NapCatConfig.boolean('enabled', '启用插件', true, '总开关'),
-    ctx.NapCatConfig.text('commandPrefix', '命令前缀', '球鳖', '例如：球鳖 今天吃什么；留空表示无前缀'),
+    ctx.NapCatConfig.text('commandPrefix', '命令前缀', '/', '例如：/今天吃什么；留空表示无前缀'),
     ctx.NapCatConfig.text('assetsRoot', '素材根目录', DEFAULT_CONFIG.assetsRoot, '默认使用仓库内的 ./assets'),
     ctx.NapCatConfig.boolean('chooseEnabled', '启用二选一', true, ''),
     ctx.NapCatConfig.boolean('foodEnabled', '启用今天吃什么', true, ''),
