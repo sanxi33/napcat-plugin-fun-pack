@@ -1,31 +1,20 @@
 # napcat-plugin-fun-pack
 
-一个为 NapCat 设计的轻量娱乐插件包。装上之后，你就能在群里直接玩二选一、今天吃什么、今天喝什么、龙图、对吗、`.d20`、`/roll` 这些小功能。
+群聊里搞气氛用的娱乐功能合集。装上就能玩二选一、今天吃什么、今天喝什么、龙图、对吗、`.d20`、`/roll`、下班！这些，不需要配什么第三方 API，下载 zip 导入 NapCat 就行。
 
-## 适用场景
+## 下载安装
 
-- 给群聊增加一点轻松互动功能
-- 希望导入插件后马上就能玩
-- 不想额外配置第三方服务或 API
+去 [Releases](https://github.com/sanxi33/napcat-plugin-fun-pack/releases) 下最新的 `napcat-plugin-fun-pack.zip`，在 NapCat 插件管理里导入并启用。
 
-## 环境要求
+NapCat ≥ `4.15.19` 的话可以直接点这个按钮跳转安装：
 
-- 已部署 NapCat，并了解如何导入插件包 (`.zip`)
-- 无需额外依赖或 API 密钥
+<a href="https://napneko.github.io/napcat-plugin-index?pluginId=napcat-plugin-fun-pack" target="_blank">
+  <img src="https://github.com/NapNeko/napcat-plugin-index/blob/pages/button.png?raw=true" alt="在 NapCat WebUI 中打开" width="170">
+</a>
 
-## 安装步骤
+## 默认配置
 
-### 1. 下载插件
-
-前往 [Releases](https://github.com/sanxi33/napcat-plugin-fun-pack/releases) 页面，下载最新版本的 `napcat-plugin-fun-pack.zip`。
-
-### 2. 导入 NapCat
-
-在 NapCat 的插件管理界面中导入 zip 文件，并启用插件。
-
-### 3. 默认配置
-
-插件首次运行将使用以下默认配置：
+首次运行会自动生成以下配置，想关哪个子功能改 `false` 就行：
 
 ```json
 {
@@ -43,50 +32,28 @@
 }
 ```
 
-一般建议先保持默认值，确认功能跑通后再按需关闭某些子功能。
+`commandPrefix` 设成空字符串的话可以直接输命令本体，不用加前缀。
 
-## 使用方法
+## 支持的命令
 
-常见玩法示例：
-
-```text
+```
 /要奶茶还是咖啡
 /今天吃什么
 /今天喝什么
 /龙图
 /对吗
-/.d20
-//roll
+.d20
+/roll
 /下班！
 ```
 
-如果你把 `commandPrefix` 设为空，则可以直接输入命令本体。
-
-## 验证安装
-
-建议先试这 3 条：
-
-```text
-/今天吃什么
-/.d20
-/要奶茶还是咖啡
-```
-
-只要有任意一条正常返回，说明插件已经工作了。
-
-## 快捷安装链接
-
-NapCat 版本 ≥ `4.15.19` 时，可点击下方按钮快速跳转至插件安装页面：
-
-<a href="https://napneko.github.io/napcat-plugin-index?pluginId=napcat-plugin-fun-pack" target="_blank">
-  <img src="https://github.com/NapNeko/napcat-plugin-index/blob/pages/button.png?raw=true" alt="在 NapCat WebUI 中打开" width="170">
-</a>
+装好随便发一条 `/今天吃什么` 或者 `.d20`，能正常回复就说明跑通了。
 
 ## 已知限制
 
-- 开源版目前不包含“今天玩什么”功能
-- 素材是本地文件，因此 release 包会比普通纯代码插件大一些
-- 资源随机逻辑依赖本地文件，不适合极小体积部署场景
+- 开源版不包含「今天玩什么」功能
+- 素材资源在本地，release 包比纯代码插件大一些
+- 资源随机逻辑依赖本地文件，极小体积部署场景可能不太合适
 
 ## License
 
